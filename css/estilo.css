@@ -1,0 +1,270 @@
+/*Estrutura do site*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: white url(../imagem/fundo.png) repeat-x left top;
+}
+
+/*Estrutura do site*/
+/* Cabeçalho do site ou Topo*/
+#principal {
+  width: 750px;
+  margin: 0 auto;
+}
+
+#topo {
+  height: 150px;
+  padding-top: 25px;
+  background: url(../imagem/detalhe-topo.png) no-repeat right top;
+}
+
+.logo {
+  width: 152px;
+  height: 66px;
+  background: url(../imagem/logo.png) no-repeat center;
+  text-indent: -3000px;
+}
+
+/* Barra de Navegação topo */
+
+a:link a:visited a:hover {
+  color: #b10333;
+  padding: 2px;
+}
+
+ul {
+  /* essa formatação sera usada para todas as "ul", 
+  (sempre tenho que usar essa propriedade para minhas formatações de link)*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/**********formatação de navegação horizontal**********/
+#topo ul {
+  margin: 30px 0px;
+  background: #b10333;
+  float: left;
+}
+
+#topo ul li {
+  float: left;
+}
+
+#topo ul a {
+  font-size: 0.9em;
+  display: block;
+  padding: 0.5em 1.5em;
+  line-height: 2.1em;
+  text-decoration: none;
+  color: #fff;
+  background: url(../imagem/divisor.png) no-repeat left center;
+}
+/**********formatação de navegação horizontal**********/
+
+#topo ul .primeiro a {
+  background: none;
+}
+
+/*Propriedade para trocar color da letra, animações*/
+#topo ul a:hover {
+  color: #69001d;
+} /*Propriedade para trocar color da letra, animações*/
+
+/**********Fazer marcação de pagina, ou seja, saber em qual pagina está**********/
+body.home #navegacao a#home,
+body.brasil #navegacao a#brasil,
+body.internacional #navegacao a#internacional,
+body.economia #navegacao a#economia,
+body.saude #navegacao a#saude,
+body.ciencia #navegacao a#ciencia,
+body.fotos #navegacao a#fotos {
+  color: #fff;
+  background: #de003e;
+  cursor: pointer;
+}
+/**********Fazer marcação de pagina, ou seja, saber em qual pagina está**********/
+
+/* Final Barra de Navegação topo */
+/* Final Cabeçalho do site ou Topo*/
+
+/*Inicio configuração layout de três colunas*/
+#conteudo {
+  margin-top: 60px;
+  background: #f5f5f5;
+}
+#lateral {
+  width: 180px;
+  float: left;
+  margin: 0 0 20px -750px;
+}
+
+#primario {
+  width: 270px;
+  float: left;
+  margin: 0 0 20px 195px;
+}
+
+#duas-colunas #primario {
+  width: 555px;
+}
+
+#uma-coluna #primario {
+  width: 750px;
+  margin: 0 0 20px 0;
+}
+
+#secundario {
+  width: 270px;
+  float: left;
+  margin: 0 0 20px 15px;
+}
+
+#tres-colunas #primario {
+  width: 270px;
+  float: left;
+  margin: 0 0 20 195px;
+}
+/*Final configuração layout de três colunas*/
+
+/*Formatação de imagem*/
+img {
+  border: 2px solid #dfdfdf;
+}
+/* Posso esta usando essas duas maneira de formantação para as imagens*/
+/*
+img.img-principal {
+  width: 98%;
+  border: 3px solid #dfdfdf;
+}*/
+/*Final Formatação de imagem*/
+
+/*Formatação dos titulos da COLUNAs CONTEUDOS*/
+h3 {
+  text-transform: uppercase; /*Uppercase é pra deixa letras maiusculas*/
+  display: inline;
+  font-size: 0.8em;
+  padding: 3px;
+}
+
+.destaque h3 {
+  background: #b10333;
+  color: #fff;
+}
+
+.entrevista h3 {
+  background: #de003e;
+}
+/*Formatação dos titulos da COLUNAs CONTEUDOS*/
+
+/*Formatação de Caixas de conteudo*/
+.caixa {
+  margin: 10px 0;
+  padding: 5px;
+  background: #f3f3f3 url(../imagem/fundo-caixa.png);
+}
+
+h2 {
+  font-size: 1em;
+  background: #294c71;
+  color: #fff;
+  padding: 5px;
+}
+
+.caixa-conteudo {
+  background: #fff;
+  padding: 5px;
+  margin-top: 5px;
+}
+/*Final Formatação de Caixas de conteudo*/
+
+/*Formatação menu lateral*/
+#lateral ul a {
+  font-size: 0.9em;
+  padding: 3px;
+  display: block;
+  line-height: 30px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #f3f3f3;
+}
+
+#lateral ul a:hover {
+  background: #f9f9f9 url(../imagem/marcador.png) no-repeat left center;
+  padding-left: 20px;
+  color: #a1a1a1;
+}
+/*Final Formatação menu lateral*/
+
+/*Formatação de formulario*/
+label {
+  display: block;
+  cursor: pointer;
+  margin: 2px;
+}
+
+input {
+  width: 125px;
+  padding: 5px;
+  font-size: 0.9em;
+  background-color: #fff;
+  margin: 2px;
+}
+
+input.submit {
+  width: 80px;
+  color: #fff;
+  background-color: #b10333;
+  border: 2px solid #870529;
+}
+/*Final Formatação de formulario*/
+
+/*Formatação da lista "Coluna Mundo"*/
+#lista-noticia li {
+  padding: 2px;
+  border-bottom: 1px solid #ccc;
+  height: 62px;
+}
+
+#lista-noticia li a img {
+  float: left;
+  margin: 3px;
+}
+
+#lista-noticia li a {
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+#lista-noticia li h3 {
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 0px;
+}
+
+#lista-noticia li a p {
+  font-size: 0.8em;
+  color: #000;
+}
+
+#lista-noticia li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+/*Final Formatação da lista "Coluna Mundo"*/
+
+/*Formatação Rodape*/
+#conteudo-rodape {
+  background: #294c71;
+  padding: 20px;
+}
+
+#rodape {
+  width: 750px;
+  margin: 0 auto;
+  color: #fff;
+}
